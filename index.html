@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saint Jahrems | Kalbo's Casket Collection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="home">
+
+  <!--- Header -->
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#home">
+        Saint Jahrems
+        <span>Kalbo's Collection</span>
+      </a>
+
+      <!--- Navigation -->
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#designs">Designs &amp; Sizes</a>
+        <a href="#pricing">Price Range &amp; Insurance</a>
+        <a href="#contacts">Our Contacts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!--- Hero Section (Main page)-->
+    <section class="hero" aria-labelledby="home-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 id="home-title" lang="fil">
+            Ang inyong kamatayan<br>ay ang aming kabuhayan.
+          </h1>
+          <p>Browse our casket designs, compare size options, and view our prices.</p>
+          <a class="button" href="#designs">
+            Browse caskets <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <div class="hero-photo" role="img"
+             aria-label="Ivory, walnut, and mahogany caskets on display"></div>
+      </div>
+    </section>
+
+    <!--- Casket Designs Section -->
+    <section class="wrap collection" id="designs" aria-labelledby="designs-title">
+      <div class="section-head">
+        <h2 id="designs-title">Casket Designs &amp; Sizes</h2>
+        <p>Choose a model to explore sizes and extras.</p>
+      </div>
+
+      <!--- Product Grid -->
+      <div class="products">
+
+        <article class="product" aria-labelledby="ivory-name">
+          <div class="photo ivory" role="img" aria-label="Ivory casket"></div>
+          <div class="product-copy">
+            <h3 id="ivory-name">Luxurious Ivory</h3>
+            <p>Ivory finish with a built-in TV.</p>
+            <p>
+              <strong>Sizes:</strong> Compact, Standard, Wide<br>
+              <strong>TV options:</strong> 24-inch, 32-inch, 43-inch
+            </p>
+            <strong>₱32,000</strong>
+            <button class="button customize-button" type="button"
+                    popovertarget="ivory-options" aria-label="Customize Luxurious Ivory">
+              Customize
+            </button>
+          </div>
+
+          <section class="coffin-popup" id="ivory-options" popover
+                   aria-labelledby="ivory-title">
+            <h3 id="ivory-title">Customize Luxurious Ivory</h3>
+            <form action="https://hook.us2.make.com/cewg4cbl1s8w5bibylne84b9aybjmxgf" method="post">
+              <input type="hidden" name="coffin" value="Luxurious Ivory">
+
+              <label for="ivory-size">Coffin size</label>
+              <select id="ivory-size" name="size" required>
+                <option>Compact</option>
+                <option selected>Standard</option>
+                <option>Wide</option>
+              </select>
+
+              <label for="ivory-tv">TV size</label>
+              <select id="ivory-tv" name="extra" required>
+                <option>24-inch TV, 60 Hz, 1080p</option>
+                <option>32-inch TV, 120 Hz, 4K</option>
+                <option>43-inch TV, 240 Hz, 8K</option>
+              </select>
+
+              <label for="ivory-email">Your email</label>
+              <input class="order-email" id="ivory-email" name="email" type="email"
+                     autocomplete="email" placeholder="you@example.com" required>
+
+              <button class="button customize-button" type="submit">Send order request</button>
+              <button class="button customize-button" type="button"
+                      popovertarget="ivory-options" popovertargetaction="hide">Close</button>
+            </form>
+          </section>
+        </article>
+
+        <!--- Product 2 -->
+        <article class="product" aria-labelledby="rgb-name">
+          <div class="photo walnut" role="img" aria-label="Walnut casket"></div>
+          <div class="product-copy">
+            <h3 id="rgb-name">RGB Coffin</h3>
+            <p>A colorful casket with RGB lighting.</p>
+            <p>
+              <strong>Sizes:</strong> Compact, Standard, Wide<br>
+              <strong>Lighting:</strong> Solid, Rainbow, Gaming (+15 FPS)
+            </p>
+            <strong>₱23,500</strong>
+            <button class="button customize-button" type="button"
+                    popovertarget="rgb-options" aria-label="Customize RGB Coffin">
+              Customize
+            </button>
+          </div>
+
+          <section class="coffin-popup" id="rgb-options" popover
+                   aria-labelledby="rgb-title">
+            <h3 id="rgb-title">Customize RGB Coffin</h3>
+            <form action="https://hook.us2.make.com/cewg4cbl1s8w5bibylne84b9aybjmxgf" method="post">
+              <input type="hidden" name="coffin" value="RGB Coffin">
+
+              <label for="rgb-size">Coffin size</label>
+              <select id="rgb-size" name="size" required>
+                <option>Compact</option>
+                <option selected>Standard</option>
+                <option>Wide</option>
+              </select>
+
+              <label for="rgb-mode">Lighting mode</label>
+              <select id="rgb-mode" name="extra" required>
+                <option>Solid color</option>
+                <option>Rainbow cycle</option>
+                <option>Gaming mode (+15 FPS)</option>
+              </select>
+
+              <label for="rgb-email">Your email</label>
+              <input class="order-email" id="rgb-email" name="email" type="email"
+                     autocomplete="email" placeholder="you@example.com" required>
+
+              <button class="button customize-button" type="submit">Send order request</button>
+              <button class="button customize-button" type="button"
+                      popovertarget="rgb-options" popovertargetaction="hide">Close</button>
+            </form>
+          </section>
+        </article>
+
+        <!--- Product 3 -->
+        <article class="product" aria-labelledby="gucci-name">
+          <div class="photo mahogany" role="img" aria-label="Dark mahogany casket"></div>
+          <div class="product-copy">
+            <h3 id="gucci-name">Gucci Coffin</h3>
+            <p>It's Gucci, it's luxury!</p>
+            <p>
+              <strong>Sizes:</strong> Compact, Standard, Wide<br>
+              <strong>Editions:</strong> Classic Gucci, Limited Edition
+            </p>
+            <strong>₱60,000</strong>
+            <button class="button customize-button" type="button"
+                    popovertarget="gucci-options" aria-label="Customize Gucci Coffin">
+              Customize
+            </button>
+          </div>
+
+          <section class="coffin-popup" id="gucci-options" popover
+                   aria-labelledby="gucci-title">
+            <h3 id="gucci-title">Customize Gucci Coffin</h3>
+            <form action="https://hook.us2.make.com/cewg4cbl1s8w5bibylne84b9aybjmxgf" method="post">
+              <input type="hidden" name="coffin" value="Gucci Coffin">
+
+              <label for="gucci-size">Coffin size</label>
+              <select id="gucci-size" name="size" required>
+                <option>Compact</option>
+                <option selected>Standard</option>
+                <option>Wide</option>
+              </select>
+
+              <label for="gucci-edition">Edition</label>
+              <select id="gucci-edition" name="extra" required>
+                <option>Classic Gucci</option>
+                <option>Limited Edition</option>
+              </select>
+
+              <label for="gucci-email">Your email</label>
+              <input class="order-email" id="gucci-email" name="email" type="email"
+                     autocomplete="email" placeholder="you@example.com" required>
+
+              <button class="button customize-button" type="submit">Send order request</button>
+              <button class="button customize-button" type="button"
+                      popovertarget="gucci-options" popovertargetaction="hide">Close</button>
+            </form>
+          </section>
+        </article>
+
+      </div>
+    </section>
+
+    <!--- Pricing Section -->
+    <section class="inquiries" id="pricing" aria-labelledby="pricing-title">
+      <div class="wrap inquiry-inner">
+        <h2 id="pricing-title">Price Range &amp; Insurance</h2>
+
+        <h3>Sample Casket Prices</h3>
+        <p>Prices in this catalog range from <strong>₱23,500 to ₱60,000</strong>.</p>
+
+        <h3>Insurance and Memorial Plans</h3>
+        <p>
+          If you have a life insurance policy or a pre-need memorial plan,
+          check with your provider to see whether it includes a casket
+          or provides a benefit you can use toward the cost.
+        </p>
+      </div>
+    </section>
+
+    <!--- Our Contacts Section -->
+    <section class="wrap collection" id="contacts" aria-labelledby="contacts-title">
+      <div class="inquiry-inner">
+        <h2 id="contacts-title">Our Contacts</h2>
+        <p>Have a question about a coffin design or size? Get in touch with our team.</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:saintjahrems@example.com">saintjahrems@example.com</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+639692926767">0969 292 6767</a></li>
+          <li><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1Guw6wmyqS/">Saint Jahrems on Facebook</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!--- Footer -->
+  <footer class="wrap footer">
+    <p>Very Official Jahrem's Collection.</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,475 @@
+:root {
+  color-scheme: light;
+  --ink: #1c3027;
+  --forest: #14271e;
+  --cream: #f8f5ee;
+  --white: #fffcf6;
+  --gold: #ead6a7;
+  --line: #e0d8c8;
+  --lift-shadow: 0 20px 40px rgb(20 39 30 / 16%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, var(--cream), #f1ede4);
+  color: var(--ink);
+  font: 1rem/1.55 system-ui, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1120px, calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.05rem);
+  letter-spacing: -.04em;
+}
+
+h3 {
+  font-size: 1.65rem;
+}
+
+/* Header and navigation */
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-inner {
+  min-height: 84px;
+}
+
+.brand,
+nav a {
+  text-decoration: none;
+}
+
+.brand {
+  font: 700 1.65rem/1 Georgia, serif;
+}
+
+.brand span,
+.eyebrow {
+  display: block;
+  font: 700 .68rem/1.3 system-ui, sans-serif;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.brand span {
+  margin-top: .45rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .65rem;
+  font-size: .9rem;
+  font-weight: 650;
+}
+
+nav a {
+  padding: .45rem .65rem;
+  border-radius: 8px;
+  transition: background-color 180ms ease;
+}
+
+nav a:hover {
+  background: #eee8db;
+}
+
+/* Hero section */
+.hero {
+  color: var(--white);
+  background:
+    radial-gradient(ellipse at 82% 28%, #3a5341, transparent 55%),
+    linear-gradient(135deg, #10231b, #1c3428);
+  border-bottom: 1px solid #b69b65;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  padding-block: clamp(2.5rem, 5vw, 5rem);
+}
+
+.hero-copy {
+  padding-block: 1rem;
+}
+
+.eyebrow {
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 4.1vw, 4.25rem);
+  line-height: 1.04;
+  letter-spacing: -.05em;
+  text-wrap: balance;
+}
+
+.hero-copy > p:not(.eyebrow) {
+  max-width: 37ch;
+  margin-block: 1.25rem 1.75rem;
+  color: #e3e8dd;
+}
+
+.hero-photo {
+  aspect-ratio: 16 / 9;
+  background: #263c30 url("hero-caskets.webp") center / cover no-repeat;
+  border: 1px solid rgb(234 214 167 / 40%);
+  border-radius: 22px;
+  box-shadow: 0 22px 50px rgb(0 0 0 / 30%);
+}
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+  padding: .8rem 1.1rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f2dfb3, #e2c68d);
+  color: var(--forest);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgb(20 39 30 / 12%);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.button:hover {
+  background: #f5e3bc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgb(20 39 30 / 18%);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Casket designs and product grid */
+.collection {
+  padding-block: clamp(3rem, 6vw, 5.5rem);
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .6rem 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d8ccba;
+}
+
+.section-head p {
+  margin: 0;
+  color: #4f6054;
+  font-size: .9rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.4vw, 1.75rem);
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgb(38 49 39 / 8%);
+  transition:
+    transform 260ms cubic-bezier(.2, .75, .3, 1),
+    box-shadow 260ms ease,
+    border-color 260ms ease;
+}
+
+.photo {
+  aspect-ratio: 3 / 2;
+  background-color: #263c30;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 17px 17px 0 0;
+}
+
+.ivory {
+  background-image: url("ivory.jpg");
+}
+
+.walnut {
+  background-image: url("walnut.jpg");
+}
+
+.mahogany {
+  background-image: url("mahogany.jpg");
+}
+
+.product-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(1rem, 2.2vw, 1.5rem);
+}
+
+.product-copy p {
+  margin-block: .6rem 1rem;
+  font-size: .92rem;
+}
+
+.product-copy > strong {
+  margin-top: auto;
+  color: #284d3a;
+  font-size: 1.15rem;
+}
+
+.product-copy a {
+  margin-top: .7rem;
+  font-size: .85rem;
+  text-underline-offset: .2em;
+}
+
+/* Make the coffin cards float on hover */
+@media (hover: hover) {
+  .product:hover {
+    z-index: 1;
+    transform: translateY(-8px) scale(1.015);
+    border-color: #b6a279;
+    box-shadow: var(--lift-shadow);
+  }
+}
+
+.product:focus-within {
+  border-color: #b6a279;
+  box-shadow: var(--lift-shadow);
+}
+
+/* Customize buttons and popups */
+.customize-button {
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.product-copy .customize-button {
+  margin-top: .85rem;
+}
+
+.coffin-popup {
+  position: fixed;
+  inset: 0;
+  width: min(420px, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  margin: auto;
+  overflow: auto;
+  padding: clamp(1.25rem, 4vw, 1.75rem);
+  border: 1px solid #d9c69d;
+  border-radius: 20px;
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 28%);
+}
+
+.coffin-popup:popover-open {
+  animation: pop-in 180ms ease-out;
+}
+
+.coffin-popup::backdrop {
+  background: rgb(10 20 15 / 65%);
+}
+
+.coffin-popup label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.coffin-popup select,
+.coffin-popup .order-email {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin-top: .35rem;
+  padding: .65rem;
+  border: 1px solid #858b80;
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+}
+
+.coffin-popup .button {
+  margin-top: 1.25rem;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Pricing and insurance */
+.inquiries {
+  padding-block: clamp(1.5rem, 4vw, 3.5rem);
+  border-block: 1px solid #d8ddcf;
+  background: linear-gradient(125deg, #e1e8da, #f0eee3);
+}
+
+.inquiry-inner {
+  padding: clamp(1.25rem, 4vw, 2.75rem);
+  border: 1px solid #d8ddcf;
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgb(20 39 30 / 6%);
+}
+
+.inquiry-inner h3 {
+  margin-top: 1.5rem;
+}
+
+.inquiry-inner p {
+  max-width: 58ch;
+  margin-bottom: 0;
+}
+
+/* Footer */
+.footer {
+  padding-block: 1.4rem;
+  font-size: .85rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  text-underline-offset: .2em;
+}
+
+/* Tablet and phone layouts */
+@media (max-width: 780px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .wrap {
+    width: calc(100% - 2rem);
+  }
+
+  .header-inner,
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .header-inner {
+    padding-block: 1rem;
+  }
+
+  nav {
+    gap: .25rem .8rem;
+    font-size: .82rem;
+  }
+
+  nav a {
+    padding-inline: 0;
+  }
+
+  .brand {
+    font-size: 1.38rem;
+  }
+
+  .brand span {
+    font-size: .56rem;
+  }
+
+  .hero-photo {
+    border-radius: 14px;
+  }
+
+  .products {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  nav a,
+  .button,
+  .product {
+    transition: none;
+  }
+
+  .button:hover,
+  .product:hover {
+    transform: none;
+  }
+
+  .coffin-popup:popover-open {
+    animation: none;
+  }
+}
