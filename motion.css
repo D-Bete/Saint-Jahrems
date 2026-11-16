@@ -1,0 +1,147 @@
+/* Live order preview */
+.order-preview {
+  margin: 1rem 0 0;
+  padding: .75rem 1rem;
+  border-left: 3px solid #b69b65;
+  border-radius: 8px;
+  background: var(--cream, #f8f5ee);
+  color: var(--forest, #14271e);
+  font-size: .9rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    --motion-ease: cubic-bezier(.2, .75, .25, 1);
+    --reveal-ease: cubic-bezier(.22, 1, .36, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Hero entrance */
+  .hero-copy {
+    animation: hero-enter 480ms var(--motion-ease) both;
+  }
+
+  .hero-photo {
+    animation: hero-enter 560ms var(--motion-ease) 70ms both;
+  }
+
+  /* Section entrance and staggered heading letters */
+  .section-enter {
+    animation: calm-section-enter 900ms var(--reveal-ease) both;
+  }
+
+  .reveal-word {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .reveal-letter {
+    display: inline-block;
+  }
+
+  .section-enter .reveal-letter {
+    animation: letter-settle 620ms var(--reveal-ease) both;
+    animation-delay: var(--letter-delay, 0ms);
+  }
+
+  /* Button feedback */
+  .button {
+    transition:
+      transform 160ms var(--motion-ease),
+      box-shadow 160ms ease;
+  }
+
+  .button:active {
+    transform: scale(.98);
+  }
+
+  /* Card lift and photo zoom */
+  .product {
+    overflow: hidden;
+    transition:
+      transform 280ms var(--motion-ease),
+      box-shadow 280ms ease,
+      border-color 280ms ease;
+  }
+
+  .product img.photo {
+    transform-origin: center bottom;
+    transition: transform 400ms var(--motion-ease);
+  }
+
+  @media (hover: hover) {
+    .product:hover {
+      transform: translateY(-7px);
+    }
+
+    .product:hover img.photo {
+      transform: scale(1.035);
+    }
+  }
+
+  /* Open and close each Customize popup from the center */
+  @supports (transition-behavior: allow-discrete) {
+    .coffin-popup {
+      opacity: 0;
+      transform: scaleY(.06);
+      transform-origin: center;
+      transition:
+        opacity 320ms ease,
+        transform 480ms var(--reveal-ease),
+        display 480ms allow-discrete,
+        overlay 480ms allow-discrete;
+    }
+
+    .coffin-popup:popover-open {
+      animation: none;
+      opacity: 1;
+      transform: scaleY(1);
+    }
+
+    @starting-style {
+      .coffin-popup:popover-open {
+        opacity: 0;
+        transform: scaleY(.06);
+      }
+    }
+  }
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes calm-section-enter {
+  from {
+    opacity: .65;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes letter-settle {
+  from {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
