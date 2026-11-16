@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saint Jahrems | Kalbo's Casket Collection</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Show the full square product photos */
+    .product img.photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+    }
+  </style>
 </head>
 <body id="home">
 
@@ -40,6 +50,7 @@
             Browse caskets <span aria-hidden="true">↓</span>
           </a>
         </div>
+
         <div class="hero-photo" role="img"
              aria-label="Ivory, walnut, and mahogany caskets on display"></div>
       </div>
@@ -56,7 +67,9 @@
       <div class="products">
 
         <article class="product" aria-labelledby="ivory-name">
-          <div class="photo ivory" role="img" aria-label="Ivory casket"></div>
+          <img class="photo" src="TV_COFFIN.png" width="480" height="480"
+               alt="Open casket with a built-in TV showing two cats">
+
           <div class="product-copy">
             <h3 id="ivory-name">Luxurious Ivory</h3>
             <p>Ivory finish with a built-in TV.</p>
@@ -74,6 +87,7 @@
           <section class="coffin-popup" id="ivory-options" popover
                    aria-labelledby="ivory-title">
             <h3 id="ivory-title">Customize Luxurious Ivory</h3>
+
             <form action="https://hook.us2.make.com/cewg4cbl1s8w5bibylne84b9aybjmxgf" method="post">
               <input type="hidden" name="coffin" value="Luxurious Ivory">
 
@@ -95,16 +109,22 @@
               <input class="order-email" id="ivory-email" name="email" type="email"
                      autocomplete="email" placeholder="you@example.com" required>
 
-              <button class="button customize-button" type="submit">Send order request</button>
+              <button class="button customize-button" type="submit">
+                Send order request
+              </button>
               <button class="button customize-button" type="button"
-                      popovertarget="ivory-options" popovertargetaction="hide">Close</button>
+                      popovertarget="ivory-options" popovertargetaction="hide">
+                Close
+              </button>
             </form>
           </section>
         </article>
 
         <!--- Product 2 -->
         <article class="product" aria-labelledby="rgb-name">
-          <div class="photo walnut" role="img" aria-label="Walnut casket"></div>
+          <img class="photo" src="RGB_COFFIN.png" width="480" height="480"
+               alt="Open wooden casket with rainbow lighting around its base">
+
           <div class="product-copy">
             <h3 id="rgb-name">RGB Coffin</h3>
             <p>A colorful casket with RGB lighting.</p>
@@ -122,6 +142,7 @@
           <section class="coffin-popup" id="rgb-options" popover
                    aria-labelledby="rgb-title">
             <h3 id="rgb-title">Customize RGB Coffin</h3>
+
             <form action="https://hook.us2.make.com/cewg4cbl1s8w5bibylne84b9aybjmxgf" method="post">
               <input type="hidden" name="coffin" value="RGB Coffin">
 
@@ -143,16 +164,22 @@
               <input class="order-email" id="rgb-email" name="email" type="email"
                      autocomplete="email" placeholder="you@example.com" required>
 
-              <button class="button customize-button" type="submit">Send order request</button>
+              <button class="button customize-button" type="submit">
+                Send order request
+              </button>
               <button class="button customize-button" type="button"
-                      popovertarget="rgb-options" popovertargetaction="hide">Close</button>
+                      popovertarget="rgb-options" popovertargetaction="hide">
+                Close
+              </button>
             </form>
           </section>
         </article>
 
         <!--- Product 3 -->
         <article class="product" aria-labelledby="gucci-name">
-          <div class="photo mahogany" role="img" aria-label="Dark mahogany casket"></div>
+          <img class="photo" src="GUCCI_COFFIN.png" width="480" height="480"
+               alt="Patterned black casket with gold handles and a red and green stripe">
+
           <div class="product-copy">
             <h3 id="gucci-name">Gucci Coffin</h3>
             <p>It's Gucci, it's luxury!</p>
@@ -170,6 +197,7 @@
           <section class="coffin-popup" id="gucci-options" popover
                    aria-labelledby="gucci-title">
             <h3 id="gucci-title">Customize Gucci Coffin</h3>
+
             <form action="https://hook.us2.make.com/cewg4cbl1s8w5bibylne84b9aybjmxgf" method="post">
               <input type="hidden" name="coffin" value="Gucci Coffin">
 
@@ -190,9 +218,13 @@
               <input class="order-email" id="gucci-email" name="email" type="email"
                      autocomplete="email" placeholder="you@example.com" required>
 
-              <button class="button customize-button" type="submit">Send order request</button>
+              <button class="button customize-button" type="submit">
+                Send order request
+              </button>
               <button class="button customize-button" type="button"
-                      popovertarget="gucci-options" popovertargetaction="hide">Close</button>
+                      popovertarget="gucci-options" popovertargetaction="hide">
+                Close
+              </button>
             </form>
           </section>
         </article>
@@ -222,10 +254,20 @@
       <div class="inquiry-inner">
         <h2 id="contacts-title">Our Contacts</h2>
         <p>Have a question about a coffin design or size? Get in touch with our team.</p>
+
         <ul>
-          <li><strong>Email:</strong> <a href="mailto:saintjahrems@example.com">saintjahrems@example.com</a></li>
-          <li><strong>Phone:</strong> <a href="tel:+639692926767">0969 292 6767</a></li>
-          <li><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1Guw6wmyqS/">Saint Jahrems on Facebook</a></li>
+          <li>
+            <strong>Email:</strong>
+            <a href="mailto:saintjahrems@example.com">saintjahrems@example.com</a>
+          </li>
+          <li>
+            <strong>Phone:</strong>
+            <a href="tel:+639692926767">0969 292 6767</a>
+          </li>
+          <li>
+            <strong>Facebook:</strong>
+            <a href="https://www.facebook.com/share/1Guw6wmyqS/">Saint Jahrems on Facebook</a>
+          </li>
         </ul>
       </div>
     </section>
